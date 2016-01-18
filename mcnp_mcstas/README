@@ -1,0 +1,21 @@
+Running the MCNPX input file: ex1, should give you a file called: wssa
+Look for "Source Surface Write" in the manual.
+
+If you rename this file to: rssa and run the script called: run.sh, that
+should run McStas using as source the rssa file.
+
+This will create a file called wssa, which you can rename to rssa and
+run the MCNPX input file: ex1_read.
+
+There are no tallies (detectors) in this file, this you will need to
+define yourself. It is meant as an example to show you how the procedure
+is done.
+
+I hope it help -if not, please ask
+
+PS: I realize that the renaming of files is annoying - but it was never
+quite annoying enough for me to fix it...
+
+best regards,
+Esben
+

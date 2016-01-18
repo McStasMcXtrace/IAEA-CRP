@@ -1,0 +1,38 @@
+file: ex1
+1 0 (-31 32 -33 34 -35 36)           imp:n=1 imp:p=1  $moderator
+2 0   40 -41 -44 45 46 -47           imp:n=1 imp:p=1  $inside guide
+22 4 -7.87 (42 -43 -48 49 46 -47) (-40:41:44:-45:-46:47)  imp:n=1 imp:p=1  $shielding arround guide
+23 0 -23  (31:-32:33:-34:35:-36)     imp:n=1 imp:p=1  $void between moderator and guide entrance
+99 0 23 (-42:43:44:-45:-46:47)                           imp:n=0 imp:p=0  $outside world
+
+40 c/x -150002 200 150000
+41 c/x -149998 200 150000
+42 c/x -150050 200 150000
+43 c/x -149950 200 150000
+44 px  2.0            $ plane for neutron channel
+45 px -2.0            $ plane for neutron channel
+46 pz  200.0          $ plane for neutron channel - start guide
+47 pz  5000.0         $ plane for neutron channel - end guide
+48 px  50.0            $ plane for shielding
+49 px -50.0            $ plane for shielding
+c 2  RPP  -2.0  2.0  -2.0  2.0 200 5000
+c 22 RPP -50.0 50.0 -50.0 50.0 200 5000
+23 RPP -50.0 50.0 -50.0 50.0 -10 200
+31 px  6.0
+32 px -6.0
+33 py  6.0
+34 py -6.0
+35 pz  0.1
+36 pz  0.0
+
+phys:p 50
+phys:n 3000
+mode n p
+nps 1E4
+c nps 1000
+c St37 - from Uwe:15m_06.i
+m4 26000.50c -0.9693 6000.60c -0.0017 25055.60c -0.014 &
+   14000.60c -0.005 29000.50c -0.005 28000.50c -0.005
+c Source definition:
+ssr
+PRDMP  50000 J -1
